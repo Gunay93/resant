@@ -498,17 +498,17 @@
                   icon:icons
               });
               gmarkers.push(marker);
-              google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
                   return function() {
                       infowindow.setContent("<img class='map-image' src=" + markers[i][7] + ">" + "<div class='map-info'><div class='popupText'>" + markers[i][1] + "</div>" + "<div class='innerpopupText'>" + markers[i][2] + "</div>" + "<div class='innerpopup-price'>" + markers[i][6] + "</div>"+"<div class='innerpopupText'>"+markers[i][8]+"</div></div>");
                       infowindow.open(map, marker);
                   }
               })(marker, i));
-              // google.maps.event.addListener(marker, 'mouseout', (function(marker, i) {
-              //     return function() {
-              //       infowindow.close();
-              //     }
-              // })(marker, i));
+              google.maps.event.addListener(marker, 'mouseout', (function(marker, i) {
+                  return function() {
+                    infowindow.close();
+                  }
+              })(marker, i));
           }
   
   
