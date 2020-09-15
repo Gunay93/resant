@@ -371,6 +371,7 @@ p{margin:0}
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer !important;
 }
 .ui-slider-horizontal .ui-slider-handle:focus{
     border:none;
