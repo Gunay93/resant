@@ -4,19 +4,18 @@ ul,ol{padding:0}
 p{margin:0}
 *{
     font-family: 'Proxima Nova';
-    /* font-family: 'Futura, sans-serif'; */
+    /* font-family: Futura, sans-serif; */
     /* font-family: 'Montserrat', sans-serif; */
     text-decoration:none !important;
 }
-#news,#projects,#footer,#footer-menu{padding:50px 0}
+#news,#projects,#footer-menu{padding:50px 0}
+#footer{padding:30px 0}
 #navbar{
     width: 100%;
-    background: #d0ac47;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #d0ac47), color-stop(33%, #d0ac47), color-stop(67%, #d0ac47), color-stop(100%, #d0ac47));
-    background: -webkit-linear-gradient(left, #d0ac47 0%, #d0ac47 33%, #d0ac47 67%, #d0ac47 100%);
-    background: -o-linear-gradient(left, #d0ac47 0%, #d0ac47 33%, #d0ac47 67%, #d0ac47 100%);
-    background: -ms-linear-gradient(left, #d0ac47 0%, #d0ac47 33%, #d0ac47 67%, #d0ac47 100%);
-    background: linear-gradient(to right, #d0ac47 0%, #d0ac47 33%, #d0ac47 67%, #d0ac47 100%);
+    background: -webkit-linear-gradient(left, #b08c2a 0%, #d0ac47 33%, #a77f0d 67%, #e7c669 100%);
+    background: -o-linear-gradient(left, #b08c2a 0%, #d0ac47 33%, #a77f0d 67%, #e7c669 100%);
+    background: -ms-linear-gradient(left, #b08c2a 0%, #d0ac47 33%, #a77f0d 67%, #e7c669 100%);
+    background: linear-gradient(to right, #b08c2a 0%, #d0ac47 33%, #a77f0d 67%, #e7c669 100%);
 }
 #projects .project-image img:first-child {
     width: 100%;
@@ -29,8 +28,8 @@ p{margin:0}
 .project-title {
     color: #d0ac47;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 21px;
+    line-height: 30px;
 }
 .project-details svg{
     width: 11px;
@@ -41,7 +40,7 @@ p{margin:0}
 }
 .project-details span{
     color: #959595;
-    font-size: 11px;
+    font-size: 14px;
     display: inline-block;
 }
 .project-details span:nth-of-type(3){margin-top: 5px;}
@@ -201,11 +200,12 @@ p{margin:0}
 .navbar-nav .nav-link{
     padding: 5px 0 !important;
     display: inline-block;
-    margin:10px;
+    margin: 10px;
     text-transform: uppercase;
     line-height: 20px;
     letter-spacing: normal;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 900;
     color: #ffffff;
     position: relative;
 }
@@ -587,7 +587,11 @@ p{margin:0}
     cursor: pointer;
 }
 .lang-img {
-    height: 19px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 3px
 }
 .icon-block-lang svg {
     transform: rotate(90deg);
@@ -597,27 +601,28 @@ p{margin:0}
 .lang-dropdown {
     height: auto;
     justify-content: center;
-    border-radius: 10px;
     flex-direction: column;
     position: absolute;
     background-color: white;
     overflow: hidden;
-    z-index: 10;
     display: none;
     top: 45px;
     z-index: 25;
-    right: initial;
-    left: -40px;
+    right: 0;
+    padding: 45px 40px;
+    box-shadow: 0 30px 60px 0 rgba(68,83,120,.15);
 }
 .lang-dropdown .langs {
     width: 100%;
     padding: 0;
     margin: 0;
 }
-.lang-dropdown .langs li:hover{background-color:#f8f9fa}
+.lang-dropdown .langs li:hover a{
+    color: #b28c1d
+}
 .lang-dropdown .langs li {
     list-style: none;
-    padding: 6px 11px 6px 8px;
+    margin-bottom: 19px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -630,14 +635,15 @@ p{margin:0}
     margin-right: 5px;
 }
 .lang-dropdown .langs li a {
-    color: #666666;
-    font-size: 13px;
     font-weight: 600;
+    color: #666666;
+    font-size: 15px;
+    letter-spacing: .3px;
 }
 .fixed-menu{
     position: fixed;
     z-index:99999;
-    background: rgba(255,255,255,0.95) !important;
+    background: #fff !important;
     padding: 8px 0;
 }
 .fixed-menu .navbar-nav .nav-link{color: #000000;}
@@ -655,26 +661,24 @@ p{margin:0}
 .fixed-menu-button{display: none;}
 .fixed-menu .fixed-menu-button{
     position: relative;
-    display:inline-block;
-    background: #d0ac47;
-    border-radius: 18px;
+    display: inline-block;
+    background: #4ed047;
+    border-radius: 22px;
     min-width: 145px;
     padding: 0 64px 0 30px;
     margin-left: auto;
     text-align: center;
     line-height: 36px;
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     font-weight: 700;
     -webkit-transition: all 0.25s ease;
     -ms-transition: all 0.25s ease;
     transition: all 0.25s ease;
-    border: 1px solid transparent
 }
 .fixed-menu .fixed-menu-button:hover{
     background: white;
     color:#808080;
-    border: 1px solid #d0ac47
 }
 .fixed-menu .fixed-menu-button:after {
     content:"";
@@ -734,6 +738,7 @@ p{margin:0}
 #footer-menu h1 a {
     color: #d0ac47;
     font-size: 15px;
+    font-weight: 600;
     line-height: 20px;
     text-transform: uppercase;
 }
