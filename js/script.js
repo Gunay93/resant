@@ -61,3 +61,6 @@ if ($(window).scrollTop()>navh){
 else{
 $('#navbar').removeClass('fixed-menu fadeInDown');
 }
+$('.icon-wishlist').click(function() {
+  $(this).find('svg path').toggleClass('fill-icon');
+});
